@@ -3,128 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online-Store</title>
-    <style>
-      * {
-        margin: 0px;
-      }
-
-      .container {
-        background-color: white;
-      }
-      .header {
-        display: flex;
-        justify-content: space-between;
-        background-color: orange;
-      }
-      .row {
-        display: flex;
-        justify-content: center;
-        background-color: aqua;
-      }
-      .box {
-        background-color: white;
-        margin: 20px;
-        padding: 10px;
-      }
-      .new_row1 {
-        display: flex;
-        justify-content: center;
-
-        background-color: silver;
-        margin: 30px;
-
-      }
-      .border1{
-        background-color: silver;
-        margin: 10px;
-      }
-      .desc1{
-        font-size: x-large;
-        background-color: wheat;
-      }
-      .new_row2 {
-        display: flex;
-        justify-content: center;
-        background-color: silver;
-        margin: 30px;
-
-      }
-      .desc2{
-        font-size: x-large;
-        background-color: wheat;
-      }
-      .border2{
-        background-color: silver;
-        margin: 10px;
-      }
-      li {
-        display:inline-block;
-        padding: 10px;
-        font-size: larger;
-      }
-      a{
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <title>Batch A</title>
+    <script src="script-a.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="header">
+      <h2><a href="index.html">My Students</a> > Batch A</h2>
+      <ul>
+        <li>
+          <a href="https://nairx.github.io/portfolio-griet" target="frm">PORTFOLIO</a> (<a
+            href="https://github.com/nairx/portfolio-griet" target="_blank"
+            >GH</a
+          >)
+        </li>
+        <li><a href="https://nairx.github.io/project-1-griet-a" target="frm">PROJECT-1</a>(<a href="https://github.com/nairx/project-1-griet-a" target="_blank">GH</a>)</li>
+        <li><a href="https://nairx.github.io/temp-griet-a" target="frm">TEMP</a>(<a href="https://github.com/nairx/temp-griet-a" target="_blank">GH</a>)</li>
+      </ul>
+    </div>
     <div class="container">
-      <div class="header">
-        <div><h1>Online Store</h1></div>
-        <div>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
-        </div>
+      <div
+        id="divStudents"
+        style="overflow: scroll; height: 650px; padding: 5px"
+      ></div>
+      <div>
+        <iframe name="frm" src="home-a.html"> </iframe>
       </div>
-      <div class="row">
-        <div class="box">
-          <img src="C:\Users\GRIET\Desktop\ManojJallipalli.github.io\assets\images\1.png" />
-          <h2>Product 1</h2>
-          <p>This is the description of the product.</p>
-          <h3>Rs 230</h3>
-          <button>Add to Cart</button>
-        </div>
-        <div class="box">
-          <img src="C:\Users\GRIET\Desktop\ManojJallipalli.github.io\assets\images\2.png" />
-          <h2>Product 2</h2>
-          <p>This is the description of the product.</p>
-          <h3>Rs 200</h3>
-          <button>Add to Cart</button>
-        </div>
-        <div class="box">
-          <img src="C:\Users\GRIET\Desktop\ManojJallipalli.github.io\assets\images\3.png" />
-          <h2>Product 3</h2>
-          <p>This is the description of the product.</p>
-          <h3>Rs 375</h3>
-          <button>Add to Cart</button>
-        </div>
-      </div>
-      <div class="new_row1">
-        <div class="border1">
-            <img src="C:\Users\GRIET\Desktop\ManojJallipalli.github.io\assets\images\5.png" />    
-        </div>
-        <div class="desc1">
-                <h4>Product 4</h4>
-                <p>This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.</p>
-            </div>
-      </div>
-      <div class="new_row2">
-        <div class="desc2">
-                <h5>Product 5</h5>
-                <p>This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.This is a image description.</p>
-        </div>
-        <div class="border2">
-            <img src="C:\Users\GRIET\Desktop\ManojJallipalli.github.io\assets\images\4.png" />    
-        </div>
-      </div>
+    </div>
+    <script>
+      let str = "<ol>";
+      students.map((value) => {
+        str =
+          str +
+          `<li><a href='https://${value.user}.github.io/' target="frm">${value.name}</a> | <a href='https://github.com/${value.user}' target='_blank'>GH</a></li>`;
+      });
+      divStudents.innerHTML = str + "</ol>";
+    </script>
+    <div class="footer">@copyright 2024. All rights reserved.</div>
   </body>
 </html>
